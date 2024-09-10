@@ -1,18 +1,18 @@
 export const Breadcrumb = () => {
+  const items = ["Home", "Library", "Date"];
+
   return (
     <>
       <p className="">パンくずリスト</p>
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
-          <li className="breadcrumb-item">
-            <a href="#">Home</a>
-          </li>
-          <li className="breadcrumb-item">
-            <a href="#">Library</a>
-          </li>
-          <li className="breadcrumb-item">
-            <a href="#">Date</a>
-          </li>
+          {items.map((item) => {
+            return (
+              <li className="breadcrumb-item">
+                <a href="#">{item}</a>
+              </li>
+            );
+          })}
         </ol>
       </nav>
     </>

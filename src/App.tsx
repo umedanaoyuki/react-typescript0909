@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Breadcrumb items={items1} />
-      <Breadcrumb items={items2} />
+      <Breadcrumb items={[]} />
       <UserDetail />
       <PrimaryButton>button1</PrimaryButton>
       <PrimaryButton>button2</PrimaryButton>

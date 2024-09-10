@@ -1,8 +1,18 @@
 import { useState } from "react";
 import styles from "./Breadcrumb.module.css";
+import styled from "styled-components";
 type Props = {
   items: string[];
 };
+
+type NoticeParagraphProps = {
+  isBlank: boolean;
+};
+
+const NoticeParagraph = styled.p<NoticeParagraphProps>`
+  font-weight: 100;
+  color: ${(props) => (props.isBlank ? "red" : "gray")};
+`;
 
 export const Breadcrumb = ({ items }: Props) => {
   // const items = ["Home", "Library", "Date"];
@@ -13,9 +23,11 @@ export const Breadcrumb = ({ items }: Props) => {
     <>
       <p className={styles.listTitle}>パンくずリスト</p>
       {items.length === 0 ? (
-        <p className="">itemがありません</p>
+        <NoticeParagraph isBlank>itemがありません</NoticeParagraph>
       ) : (
-        <p className="">itemが{items.length}あります</p>
+        <NoticeParagraph isBlank={false}>
+          itemが{items.length}あります
+        </NoticeParagraph>
       )}
       <nav>
         <ol className="breadcrumb">

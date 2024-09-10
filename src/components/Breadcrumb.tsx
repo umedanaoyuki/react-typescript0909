@@ -1,7 +1,9 @@
-import { MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
 
 export const Breadcrumb = () => {
   const items = ["Home", "Library", "Date"];
+
+  const [selectedValue, setSelectedValue] = useState("");
 
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     console.log(event);
@@ -19,10 +21,14 @@ export const Breadcrumb = () => {
         <ol className="breadcrumb">
           {items.map((item) => {
             return (
-              <li className="breadcrumb-item">
-                <a href="#" onClick={handleClick}>
-                  {item}
-                </a>
+              <li key={item} className="breadcrumb-item">
+                {item === selectedValue ? (
+                  <>{item}</>
+                ) : (
+                  <a href="#" onClick={() => setSelectedValue(item)}>
+                    {item}
+                  </a>
+                )}
               </li>
             );
           })}

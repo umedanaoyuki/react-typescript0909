@@ -1,4 +1,4 @@
-import { MouseEvent, useState } from "react";
+import { useState } from "react";
 type Props = {
   items: string[];
 };
@@ -7,10 +7,6 @@ export const Breadcrumb = ({ items }: Props) => {
   // const items = ["Home", "Library", "Date"];
 
   const [selectedValue, setSelectedValue] = useState("");
-
-  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    console.log(event);
-  };
 
   return (
     <>

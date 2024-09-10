@@ -1,4 +1,5 @@
 import { Breadcrumb } from "./components/Breadcrumb";
+import { PrimaryButton } from "./components/PrimaryButton";
 import { UserDetail } from "./UserDetail";
 
 function App() {
@@ -10,6 +11,8 @@ function App() {
       <Breadcrumb items={items1} />
       <Breadcrumb items={items2} />
       <UserDetail />
+      <PrimaryButton>button1</PrimaryButton>
+      <PrimaryButton>button2</PrimaryButton>
     </>
   );
 }

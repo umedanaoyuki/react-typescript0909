@@ -1,5 +1,11 @@
+import { MouseEvent } from "react";
+
 export const Breadcrumb = () => {
   const items = ["Home", "Library", "Date"];
+
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    console.log(event);
+  };
 
   return (
     <>
@@ -14,7 +20,9 @@ export const Breadcrumb = () => {
           {items.map((item) => {
             return (
               <li className="breadcrumb-item">
-                <a href="#">{item}</a>
+                <a href="#" onClick={handleClick}>
+                  {item}
+                </a>
               </li>
             );
           })}

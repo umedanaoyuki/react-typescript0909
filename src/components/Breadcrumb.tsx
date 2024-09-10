@@ -4,7 +4,12 @@ export const Breadcrumb = () => {
   return (
     <>
       <p className="">パンくずリスト</p>
-      <nav aria-label="breadcrumb">
+      {items.length === 0 ? (
+        <p className="">itemがありません</p>
+      ) : (
+        <p className="">itemが{items.length}あります</p>
+      )}
+      <nav>
         <ol className="breadcrumb">
           {items.map((item) => {
             return (

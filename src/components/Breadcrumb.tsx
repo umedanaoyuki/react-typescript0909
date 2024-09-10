@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./Breadcrumb.module.css";
 type Props = {
   items: string[];
 };
@@ -10,7 +11,7 @@ export const Breadcrumb = ({ items }: Props) => {
 
   return (
     <>
-      <p className="">パンくずリスト</p>
+      <p className={styles.listTitle}>パンくずリスト</p>
       {items.length === 0 ? (
         <p className="">itemがありません</p>
       ) : (

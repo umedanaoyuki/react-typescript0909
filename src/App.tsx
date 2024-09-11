@@ -1,4 +1,5 @@
 import { Breadcrumb } from "./components/Breadcrumb";
+import { Form } from "./components/Form";
 import { Like } from "./components/Like";
 import { PrimaryButton } from "./components/PrimaryButton";
 import { UserList } from "./components/UserList";
@@ -19,6 +20,7 @@ function App() {
         <Like />
       </>
       <UserList />
+      <Form />
     </>
   );
 }

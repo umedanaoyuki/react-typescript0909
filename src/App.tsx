@@ -1,6 +1,7 @@
 import { Breadcrumb } from "./components/Breadcrumb";
 import { Like } from "./components/Like";
 import { PrimaryButton } from "./components/PrimaryButton";
+import { UserList } from "./components/UserList";
 import { UserDetail } from "./UserDetail";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <>
         <Like />
       </>
+      <UserList />
     </>
   );
 }
